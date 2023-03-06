@@ -40,8 +40,8 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 alert("Please enter the correct value in each field. Pilot and Copilot must contain letters only, Fuel level and Cargo must be numbers!!!")
 } else { 
     list.style.visibility = "visible"
-    pilotStatus.innerHTML = `${pilot} is ready  for launch`
-    copilotStatus.innerHTML = `${copilot} is ready  for launch`
+    pilotStatus.innerHTML = `Pilot${pilot} is ready for launch`
+    copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`
     let launchStatus = document.getElementById("launchStatus")
     
     if (fuelLevel < 10000 && cargoLevel > 10000) {
@@ -67,7 +67,7 @@ alert("Please enter the correct value in each field. Pilot and Copilot must cont
         launchStatus.innerHTML = "Shuttle is Ready for Launch"
      launchStatus.style.color = "rgb(65, 159, 106)"
         cargo.innerHTML =  "Cargo mass low enough for launch"
-        fuel.innerHTML = "Fuel level is enough for travel!"
+        fuel.innerHTML = "Fuel level high enough for launch"
 
     }
 
